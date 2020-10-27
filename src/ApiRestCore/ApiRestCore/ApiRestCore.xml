@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiRestCore</name>
+    </assembly>
+    <members>
+        <member name="M:ApiRestCore.Controllers.ClientController.Get">
+            <summary>
+            Obter todos os clientes.
+            </summary>
+            <response code="200">Lista de clientes obtidas com sucesso.</response>
+            <response code="500">Erro ao obter a lista de clientes.</response>
+        </member>
+        <member name="P:ApiRestCore.Models.Client.Comments">
+            <summary>
+            Campo para observações em geral
+            </summary>
+        </member>
+        <member name="M:ApiRestCore.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ApiRestCore.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
