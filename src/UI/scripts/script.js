@@ -10,23 +10,34 @@ function Cadastrar() {
 
 	console.log(cliente);
 
-	if (cliente.id === undefined || cliente.id === 0)
+	if (cliente.id === undefined || cliente.id == 0)
 	{
 		salvarClientes('POST', 0, cliente);
 	}			
 	else
 	{
 		salvarClientes('PUT', cliente.id, cliente);
-	}		
+	}
+	
+	LimpaCliente();
 
 	carregaClientes();
 
 	$('#myModal').modal('hide');
 }
 
+function LimpaCliente(){
+	cliente.id = 0;
+	cliente.name = '';
+	cliente.phone = '';
+	cliente.email = '';
+	cliente.comments = '';
+}
+
 function NovoCliente() {
 	var btnSalvar = document.querySelector('#btnSalvar');	
 	var tituloModal = document.querySelector('#tituloModal');
+	document.querySelector('#id').value = 0;
 	document.querySelector('#name').value = '';
 	document.querySelector('#phone').value = '';
 	document.querySelector('#email').value = '';
