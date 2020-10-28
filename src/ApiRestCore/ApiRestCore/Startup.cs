@@ -36,7 +36,15 @@ namespace ApiRestCore
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
 
-                c.IncludeXmlComments(xmlPath, includeControllerXmlComments: false);
+                try
+                {
+                    c.IncludeXmlComments(xmlPath, includeControllerXmlComments: false);
+                }
+                catch
+                {
+                    //by pass --> Para evitar execption se o caminho do xml da documentacao não estiver mapeado corretamente
+                }
+                
             });
         }
 
