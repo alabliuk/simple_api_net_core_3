@@ -4,6 +4,8 @@ namespace ApiRestCore.Models
 {
     public class Client
     {
+        public int Id { get; set; }
+
         [Required(AllowEmptyStrings = false, ErrorMessage = "Informe o nome.")]
         [MinLength(3, ErrorMessage = "O nome deve ter um tamanho mínimo de 3 caracteres.")]
         public string Name { get; set; }

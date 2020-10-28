@@ -11,6 +11,43 @@
             <response code="200">Lista de clientes obtidas com sucesso.</response>
             <response code="500">Erro ao obter a lista de clientes.</response>
         </member>
+        <member name="M:ApiRestCore.Controllers.ClientController.Get(System.Int32)">
+            <summary>
+            Obter um cliente específico por ID.
+            </summary>
+            <param name="id">ID do cliente.</param>
+            <response code="200">Cliente obtido com sucesso.</response>
+            <response code="404">Não foi encontrado cliente com ID especificado.</response>
+            <response code="500">Erro ao obter o cliente.</response>
+        </member>
+        <member name="M:ApiRestCore.Controllers.ClientController.Post(ApiRestCore.Models.Client)">
+            <summary>
+            Cadastrar cliente.
+            </summary>
+            <param name="client">Modelo do cliente.</param>
+            <response code="201">Cliente cadastrado com sucesso.</response>
+            <response code="400">Cliente inválido.</response>
+            <response code="500">Erro ao cadastrar o cliente.</response>
+        </member>
+        <member name="M:ApiRestCore.Controllers.ClientController.Put(ApiRestCore.Models.Client)">
+            <summary>
+            Alterar cliente.
+            </summary> 
+            <param name="cliente">Modelo do cliente.</param>
+            <response code="200">Cliente alterado com sucesso.</response>
+            <response code="400">O modelo do cliente enviado é inválido.</response>
+            <response code="404">Não foi encontrado cliente com ID especificado.</response>
+            <response code="500">Erro ao alterar o cliente.</response>
+        </member>
+        <member name="M:ApiRestCore.Controllers.ClientController.Delete(System.Int32)">
+            <summary>
+            Deletar cliente.
+            </summary>
+            <param name="id">ID do Cliente.</param>
+            <response code="200">Cliente deletado com sucesso.</response>
+            <response code="404">Não foi encontrado cliente com ID especificado.</response>
+            <response code="500">Erro ao deletar o cliente.</response>
+        </member>
         <member name="P:ApiRestCore.Models.Client.Comments">
             <summary>
             Campo para observações em geral
